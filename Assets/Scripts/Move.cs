@@ -27,7 +27,7 @@ public class Move : MonoBehaviour
 
                 this.transform.Translate(-h, 0, 0);
             }
-            if (Input.GetAxis("Vertical") > 0) this.transform.Translate(0, 0, -Input.GetAxisRaw("Vertical") * moveSpeed * Time.deltaTime);
+            if (Input.GetAxis("Vertical") != 0) this.transform.Translate(0, 0, -Input.GetAxisRaw("Vertical") * moveSpeed * Time.deltaTime);
 
             if (grounded)
             {
@@ -46,7 +46,7 @@ public class Move : MonoBehaviour
 
                 this.transform.Translate(-h, 0, 0);
             }
-            if (Input.GetAxis("Vertical2") > 0) this.transform.Translate(0, 0, -Input.GetAxisRaw("Vertical2") * moveSpeed * Time.deltaTime);
+            if (Input.GetAxis("Vertical2") != 0) this.transform.Translate(0, 0, -Input.GetAxisRaw("Vertical2") * moveSpeed * Time.deltaTime);
 
             if (grounded)
             {
