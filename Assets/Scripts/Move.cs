@@ -29,14 +29,14 @@ public class Move : MonoBehaviour
             }
             if (Input.GetAxis("Vertical") != 0) this.transform.Translate(0, 0, -Input.GetAxisRaw("Vertical") * moveSpeed * Time.deltaTime);
 
-            if (grounded)
+           /* if (grounded)
             {
                 if (Input.GetAxis("Jump") > 0)
                 {
                     GetComponent<Rigidbody>().AddForce(new Vector3(0, 1, 0) * jumpForce);
                     grounded = false;
                 }
-            }
+            }*/
         }
         else if (playerOne == false)
         {
@@ -48,6 +48,7 @@ public class Move : MonoBehaviour
             }
             if (Input.GetAxis("Vertical2") != 0) this.transform.Translate(0, 0, -Input.GetAxisRaw("Vertical2") * moveSpeed * Time.deltaTime);
 
+            /*
             if (grounded)
             {
                 if (Input.GetAxis("Jump2") > 0)
@@ -55,7 +56,7 @@ public class Move : MonoBehaviour
                     GetComponent<Rigidbody>().AddForce(new Vector3(0, 1, 0) * jumpForce);
                     grounded = false;
                 }
-            }
+            }*/
         }
 
     }
